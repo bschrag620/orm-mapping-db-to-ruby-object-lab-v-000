@@ -48,8 +48,8 @@ class Student
     
     rows = DB[:conn].execute(sql)
     self.map_rows(rows)
-    
   end
+  
   def save
     sql = <<-SQL
       INSERT INTO students (name, grade) 
