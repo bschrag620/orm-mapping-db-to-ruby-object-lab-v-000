@@ -25,7 +25,10 @@ class Student
   end
   
   def self.all_students_in_grade_9
-    sql = <<
+    sql = <<-SQL
+      SELECT * FROM students
+      WHERE 
+    SQL
   end
   
   def save
