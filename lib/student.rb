@@ -89,4 +89,5 @@ class Student
     
     rows = DB[:conn].execute(sql, x)
     self.map_rows(rows)
+  end
 end
