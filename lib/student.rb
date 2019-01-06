@@ -46,6 +46,9 @@ class Student
       WHERE grade < 12
     SQL
     
+    rows = DB[:conn].execute(sql)
+    self.map_rows(rows)
+    
   end
   def save
     sql = <<-SQL
