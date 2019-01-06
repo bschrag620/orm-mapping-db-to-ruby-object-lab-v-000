@@ -29,7 +29,7 @@ class Student
       SELECT * FROM students
       WHERE grade='9th grade'
     SQL
-    
+    binding.pry
     rows = DB[:conn].execute(sql)
     rows.map do |row|
       self.new_from_db(row)
