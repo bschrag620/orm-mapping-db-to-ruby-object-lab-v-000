@@ -79,4 +79,11 @@ class Student
     sql = "DROP TABLE IF EXISTS students"
     DB[:conn].execute(sql)
   end
+  
+  def self.first_X_students_in_grade_10(x)
+    sql = <<-SQL
+      SELECT * FROM students
+      WHERE grade = 10
+      LIMIT ?
+    SQL
 end
