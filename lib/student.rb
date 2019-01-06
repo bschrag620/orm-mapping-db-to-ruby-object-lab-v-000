@@ -90,4 +90,6 @@ class Student
     rows = DB[:conn].execute(sql, x)
     self.map_rows(rows)
   end
+  
+  def self.first_student
 end
