@@ -87,5 +87,6 @@ class Student
       LIMIT ?
     SQL
     
-    DB[:conn].execute(sql, x)
+    rows = DB[:conn].execute(sql, x)
+    self.map_rows(rows)
 end
